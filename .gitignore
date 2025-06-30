@@ -1,0 +1,5 @@
+sphery_env/
+.DS_Store
+spherych_devapp.sql
+__pycache__/
+*.pyc
