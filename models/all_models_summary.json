@@ -1,0 +1,210 @@
+{
+  "training_date": "2025-07-14T16:06:21.813105",
+  "total_models": 34,
+  "models": [
+    {
+      "model_key": "DualFlow_-1_10.0min",
+      "model_file": "models/DualFlow_-1_10.0min_gmm_v1.pkl",
+      "metadata_file": "models/DualFlow_-1_10.0min_gmm_v1_metadata.json",
+      "workout_count": 855
+    },
+    {
+      "model_key": "DualFlow_2_10.0min",
+      "model_file": "models/DualFlow_2_10.0min_gmm_v1.pkl",
+      "metadata_file": "models/DualFlow_2_10.0min_gmm_v1_metadata.json",
+      "workout_count": 820
+    },
+    {
+      "model_key": "LeagueQualification_2_10.0min",
+      "model_file": "models/LeagueQualification_2_10.0min_gmm_v1.pkl",
+      "metadata_file": "models/LeagueQualification_2_10.0min_gmm_v1_metadata.json",
+      "workout_count": 567
+    },
+    {
+      "model_key": "DualFlow_2_5.0min",
+      "model_file": "models/DualFlow_2_5.0min_gmm_v1.pkl",
+      "metadata_file": "models/DualFlow_2_5.0min_gmm_v1_metadata.json",
+      "workout_count": 486
+    },
+    {
+      "model_key": "DualFlow_-1_5.0min",
+      "model_file": "models/DualFlow_-1_5.0min_gmm_v1.pkl",
+      "metadata_file": "models/DualFlow_-1_5.0min_gmm_v1_metadata.json",
+      "workout_count": 411
+    },
+    {
+      "model_key": "DualFlow_-1_15.0min",
+      "model_file": "models/DualFlow_-1_15.0min_gmm_v1.pkl",
+      "metadata_file": "models/DualFlow_-1_15.0min_gmm_v1_metadata.json",
+      "workout_count": 436
+    },
+    {
+      "model_key": "DualFlow_2_3.0min",
+      "model_file": "models/DualFlow_2_3.0min_gmm_v1.pkl",
+      "metadata_file": "models/DualFlow_2_3.0min_gmm_v1_metadata.json",
+      "workout_count": 295
+    },
+    {
+      "model_key": "UpperBody_2_5.0min",
+      "model_file": "models/UpperBody_2_5.0min_gmm_v1.pkl",
+      "metadata_file": "models/UpperBody_2_5.0min_gmm_v1_metadata.json",
+      "workout_count": 331
+    },
+    {
+      "model_key": "LeagueQualification_-1_5.0min",
+      "model_file": "models/LeagueQualification_-1_5.0min_gmm_v1.pkl",
+      "metadata_file": "models/LeagueQualification_-1_5.0min_gmm_v1_metadata.json",
+      "workout_count": 331
+    },
+    {
+      "model_key": "DualFlow_2_15.0min",
+      "model_file": "models/DualFlow_2_15.0min_gmm_v1.pkl",
+      "metadata_file": "models/DualFlow_2_15.0min_gmm_v1_metadata.json",
+      "workout_count": 293
+    },
+    {
+      "model_key": "UpperBody_2_10.0min",
+      "model_file": "models/UpperBody_2_10.0min_gmm_v1.pkl",
+      "metadata_file": "models/UpperBody_2_10.0min_gmm_v1_metadata.json",
+      "workout_count": 282
+    },
+    {
+      "model_key": "LeagueQualification_2_5.0min",
+      "model_file": "models/LeagueQualification_2_5.0min_gmm_v1.pkl",
+      "metadata_file": "models/LeagueQualification_2_5.0min_gmm_v1_metadata.json",
+      "workout_count": 262
+    },
+    {
+      "model_key": "UpperBody_2_3.0min",
+      "model_file": "models/UpperBody_2_3.0min_gmm_v1.pkl",
+      "metadata_file": "models/UpperBody_2_3.0min_gmm_v1_metadata.json",
+      "workout_count": 244
+    },
+    {
+      "model_key": "DualFlow_-1_20.0min",
+      "model_file": "models/DualFlow_-1_20.0min_gmm_v1.pkl",
+      "metadata_file": "models/DualFlow_-1_20.0min_gmm_v1_metadata.json",
+      "workout_count": 214
+    },
+    {
+      "model_key": "UpperBody_1_10.0min",
+      "model_file": "models/UpperBody_1_10.0min_gmm_v1.pkl",
+      "metadata_file": "models/UpperBody_1_10.0min_gmm_v1_metadata.json",
+      "workout_count": 200
+    },
+    {
+      "model_key": "UpperBody_0_3.0min",
+      "model_file": "models/UpperBody_0_3.0min_gmm_v1.pkl",
+      "metadata_file": "models/UpperBody_0_3.0min_gmm_v1_metadata.json",
+      "workout_count": 106
+    },
+    {
+      "model_key": "LeagueQualification_-1_10.0min",
+      "model_file": "models/LeagueQualification_-1_10.0min_gmm_v1.pkl",
+      "metadata_file": "models/LeagueQualification_-1_10.0min_gmm_v1_metadata.json",
+      "workout_count": 208
+    },
+    {
+      "model_key": "RehaFlow_-1_10.0min",
+      "model_file": "models/RehaFlow_-1_10.0min_gmm_v1.pkl",
+      "metadata_file": "models/RehaFlow_-1_10.0min_gmm_v1_metadata.json",
+      "workout_count": 201
+    },
+    {
+      "model_key": "DualFlow_0_5.0min",
+      "model_file": "models/DualFlow_0_5.0min_gmm_v1.pkl",
+      "metadata_file": "models/DualFlow_0_5.0min_gmm_v1_metadata.json",
+      "workout_count": 176
+    },
+    {
+      "model_key": "UpperBody_1_5.0min",
+      "model_file": "models/UpperBody_1_5.0min_gmm_v1.pkl",
+      "metadata_file": "models/UpperBody_1_5.0min_gmm_v1_metadata.json",
+      "workout_count": 143
+    },
+    {
+      "model_key": "DualFlow_2_20.0min",
+      "model_file": "models/DualFlow_2_20.0min_gmm_v1.pkl",
+      "metadata_file": "models/DualFlow_2_20.0min_gmm_v1_metadata.json",
+      "workout_count": 141
+    },
+    {
+      "model_key": "RehaFlow_-1_15.0min",
+      "model_file": "models/RehaFlow_-1_15.0min_gmm_v1.pkl",
+      "metadata_file": "models/RehaFlow_-1_15.0min_gmm_v1_metadata.json",
+      "workout_count": 159
+    },
+    {
+      "model_key": "UpperBody_0_5.0min",
+      "model_file": "models/UpperBody_0_5.0min_gmm_v1.pkl",
+      "metadata_file": "models/UpperBody_0_5.0min_gmm_v1_metadata.json",
+      "workout_count": 145
+    },
+    {
+      "model_key": "LeagueQualification_2_3.0min",
+      "model_file": "models/LeagueQualification_2_3.0min_gmm_v1.pkl",
+      "metadata_file": "models/LeagueQualification_2_3.0min_gmm_v1_metadata.json",
+      "workout_count": 118
+    },
+    {
+      "model_key": "DualFlow_1_10.0min",
+      "model_file": "models/DualFlow_1_10.0min_gmm_v1.pkl",
+      "metadata_file": "models/DualFlow_1_10.0min_gmm_v1_metadata.json",
+      "workout_count": 126
+    },
+    {
+      "model_key": "LeagueQualification_-1_3.0min",
+      "model_file": "models/LeagueQualification_-1_3.0min_gmm_v1.pkl",
+      "metadata_file": "models/LeagueQualification_-1_3.0min_gmm_v1_metadata.json",
+      "workout_count": 118
+    },
+    {
+      "model_key": "RehaFlow_-1_5.0min",
+      "model_file": "models/RehaFlow_-1_5.0min_gmm_v1.pkl",
+      "metadata_file": "models/RehaFlow_-1_5.0min_gmm_v1_metadata.json",
+      "workout_count": 124
+    },
+    {
+      "model_key": "UpperBody_-1_10.0min",
+      "model_file": "models/UpperBody_-1_10.0min_gmm_v1.pkl",
+      "metadata_file": "models/UpperBody_-1_10.0min_gmm_v1_metadata.json",
+      "workout_count": 106
+    },
+    {
+      "model_key": "UpperBody_2_15.0min",
+      "model_file": "models/UpperBody_2_15.0min_gmm_v1.pkl",
+      "metadata_file": "models/UpperBody_2_15.0min_gmm_v1_metadata.json",
+      "workout_count": 102
+    },
+    {
+      "model_key": "DualFlow_0_10.0min",
+      "model_file": "models/DualFlow_0_10.0min_gmm_v1.pkl",
+      "metadata_file": "models/DualFlow_0_10.0min_gmm_v1_metadata.json",
+      "workout_count": 93
+    },
+    {
+      "model_key": "DualFlow_1_5.0min",
+      "model_file": "models/DualFlow_1_5.0min_gmm_v1.pkl",
+      "metadata_file": "models/DualFlow_1_5.0min_gmm_v1_metadata.json",
+      "workout_count": 88
+    },
+    {
+      "model_key": "RehaFlow_-1_20.0min",
+      "model_file": "models/RehaFlow_-1_20.0min_gmm_v1.pkl",
+      "metadata_file": "models/RehaFlow_-1_20.0min_gmm_v1_metadata.json",
+      "workout_count": 108
+    },
+    {
+      "model_key": "DualFlow_2_30.0min",
+      "model_file": "models/DualFlow_2_30.0min_gmm_v1.pkl",
+      "metadata_file": "models/DualFlow_2_30.0min_gmm_v1_metadata.json",
+      "workout_count": 65
+    },
+    {
+      "model_key": "DualFlow_-1_3.0min",
+      "model_file": "models/DualFlow_-1_3.0min_gmm_v1.pkl",
+      "metadata_file": "models/DualFlow_-1_3.0min_gmm_v1_metadata.json",
+      "workout_count": 79
+    }
+  ]
+}

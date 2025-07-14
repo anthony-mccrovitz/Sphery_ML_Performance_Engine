@@ -1,0 +1,274 @@
+---
+description: Machine learning project for building a player performance motivational engine. Rules apply to: Python data analysis, Jupyter notebook development, SQL database queries, scikit-learn model training, pandas data manipulation, matplotlib/seaborn visualization, Streamlit dashboard creation, and production ML code. Includes specific conventions for percentile calculations, demographic segmentation, database schema knowledge, and professional ML project structure. Guides development of GMM clustering models, performance target calculations, and user engagement features.
+alwaysApply: false
+---
+# Sphery ML Performance Engine - Cursor Rules
+# Project: Execube Motivational & Performance Engine
+# Author: Anthony McCrovitz
+# Version: 2.0 - Complete Professional ML Project Rules
+
+## PROJECT CONTEXT
+This is a production-ready machine learning project that analyzes player performance data from the Sphery/Execube gaming platform. The goal is to create a motivational engine that provides personalized performance targets to users based on their demographic data and game performance. This system will be integrated into the main application to drive user engagement and retention.
+
+## CORE TECHNOLOGIES & VERSIONS
+- Python 3.11+
+- Jupyter Notebooks for EDA and experimentation
+- pandas 2.0+ for data manipulation
+- scikit-learn 1.3+ for machine learning (specifically Gaussian Mixture Models)
+- matplotlib/seaborn for visualization
+- mysql-connector-python for database connectivity
+- MariaDB/MySQL database
+- Streamlit for dashboard creation
+- NumPy for numerical computations
+- joblib/pickle for model persistence
+
+## PROJECT STRUCTURE
+- `notebooks/` - Jupyter notebooks for analysis and experimentation
+- `src/` - Reusable Python modules and functions
+- `scripts/` - One-off utility scripts for data exploration
+- `plots/` - Generated visualizations and charts
+- `models/` - Trained ML models and metadata
+- `data/` - Sample datasets and exports (no sensitive data)
+- `docs/` - Project documentation and reports
+- `tests/` - Unit tests for src modules
+- `config/` - Configuration files (non-sensitive)
+
+## CODING STANDARDS
+
+### Python Code Style
+- Use PEP 8 style guidelines strictly
+- Maximum line length: 88 characters (Black formatter standard)
+- Use type hints for ALL function parameters and return values
+- Prefer f-strings over .format() or % formatting
+- Use descriptive variable names (e.g., `df_cleaned` not `df2`)
+- Use snake_case for functions and variables, PascalCase for classes
+- Add trailing commas in multi-line data structures
+- Use pathlib.Path for file operations, not os.path
+
+### Database Queries
+- Use parameterized queries when accepting user input to prevent SQL injection
+- For static analytical queries, direct SQL strings are acceptable
+- Use LEFT JOIN when demographic data might be missing
+- Include meaningful aliases for table names (e.g., `w` for Workouts, `rc` for RaceConfigs)
+- Always close database connections in finally blocks
+- Use connection pooling for repeated database operations
+- Include query performance timing for optimization
+
+### Data Science Best Practices
+- Always check for null values before analysis using .isnull().sum()
+- Use `.copy()` when creating derived DataFrames to avoid SettingWithCopyWarning
+- Set random_state=42 for ALL reproducible operations
+- Sample large datasets for visualization (max 2000 points for scatter plots)
+- Use professional plot styling with seaborn whitegrid theme
+- Validate data types and ranges after loading
+- Document data assumptions and limitations
+- Use meaningful column names after transformations
+
+### Error Handling & Logging
+- Always wrap database connections in try/except/finally blocks
+- Use specific exception types (mysql.connector.Error, pandas.errors.DatabaseError)
+- Provide helpful error messages that guide debugging
+- Never suppress exceptions silently - always log or re-raise
+- Use logging module instead of print for production code
+- Include stack traces in error logs for debugging
+- Validate inputs at function boundaries
+
+## VIRTUAL ENVIRONMENT MANAGEMENT
+- Always activate `sphery_env` virtual environment before running code
+- Use `pip install` commands within the virtual environment only
+- Never install packages globally when working on this project
+- Pin exact versions in requirements.txt for reproducibility
+- Use virtual environment in Jupyter kernel selection
+
+## JUPYTER NOTEBOOK CONVENTIONS
+
+### Cell Organization & Structure
+- Cell 1: Always imports and setup with version checks
+- Cell 2: Data loading and database connection
+- Cell 3: Data cleaning and feature engineering
+- Cell 4+: Analysis, modeling, or visualization (one concept per cell)
+- Use markdown cells to explain complex analysis steps
+- Include cell execution time estimates for long operations
+- Clear cell outputs before committing to Git
+
+### Plotting Standards
+- Figure size: (14, 7) for single plots, (14, 8) for comparison plots
+- Always include meaningful titles with fontsize=16, weight='bold'
+- Use plt.ticklabel_format(style='plain', axis='y') for large numbers
+- Add alpha=0.3-0.5 for scatter plots to handle overlapping points
+- Use seaborn color palettes for consistency
+- Include axis labels with units where applicable
+- Add plt.tight_layout() before plt.show()
+- Save important plots to plots/ directory with descriptive names
+
+### Variable Naming Conventions
+- `df` for raw data from database
+- `df_cleaned` for processed data ready for analysis
+- `df_filtered` for subsets based on conditions
+- `age_df` or `plot_df` for specific analysis subsets
+- `config` for database configuration dictionaries
+- `query` for SQL query strings
+- `model_*` prefix for trained models
+- `scaler_*` prefix for fitted scalers
+
+### Memory Management
+- Use `del df` to free memory after large DataFrames are no longer needed
+- Clear output of cells with large data displays before committing
+- Restart kernel periodically during long analysis sessions
+- Monitor memory usage with %memit magic command when needed
+- Use chunking for very large datasets
+
+## MACHINE LEARNING CONVENTIONS
+
+### Model Training Standards
+- Always use GaussianMixture from sklearn.mixture for clustering
+- Set random_state=42 for ALL stochastic operations
+- Use StandardScaler for feature scaling when appropriate
+- Implement proper train/validation/test splits
+- Use cross-validation for robust performance estimates
+- Save models to `models/` directory with descriptive names
+- Include model training timestamp in filename
+
+### Model Persistence & Metadata
+- Save models using joblib for scikit-learn objects
+- Include model metadata (training date, data version, performance metrics)
+- Always test model loading before deploying
+- Version control model files with clear naming (e.g., `racer_gmm_v1_20241201.pkl`)
+- Save preprocessing steps (scalers, encoders) alongside models
+- Document model assumptions and limitations
+
+### Performance Metrics & Validation
+- Focus on percentile-based metrics (50th, 75th, 90th percentiles)
+- Use numpy.percentile() for consistent percentile calculations
+- Always specify interpolation method for percentiles
+- Validate percentile results are monotonically increasing
+- Round percentile thresholds to reasonable precision
+- Include confidence intervals for performance estimates
+- Track model performance over time
+
+## DATABASE SCHEMA KNOWLEDGE
+
+### Key Tables & Relationships
+- `Workouts`: Main performance data (score, duration, userId, completedWorkout)
+- `RaceConfigs`: Racer game settings (difficulty, workoutId, duration)
+- `SpeedCages`: Speed Cage game data (self-contained with score, userId)
+- `Users`: User account information (id, username, email)
+- `HealthData`: Demographics (dob, weight, height, userId)
+- `Sessions`: Session tracking (loginAt, logoutAt, userId)
+
+### Critical Relationships
+- Workouts.id = RaceConfigs.workoutId (for Racer games)
+- Users.id = Workouts.userId (user who played)
+- Users.id = HealthData.userId (user demographics)
+- Users.id = Sessions.userId (user session data)
+
+### Data Quality Rules
+- Always validate DataFrame shapes after joins
+- Check for duplicate records after data loading
+- Verify score ranges are reasonable (no negative scores)
+- Validate age calculations result in reasonable ranges (5-100 years)
+- Handle missing demographic data gracefully with LEFT JOINs
+
+## SPECIFIC PROJECT REQUIREMENTS
+
+### Data Filtering Standards
+- Always filter out incomplete workouts: `completedWorkout == 1`
+- Always filter out zero scores: `score > 0`
+- Remove obvious outliers (scores > 99th percentile) for model training
+- Handle missing demographic data gracefully
+- Document all filtering decisions and their rationale
+
+### Age Calculation Protocol
+- Always calculate age from `dob` column, never use the stale `age` column
+- Use exact formula: `(pd.to_datetime('today') - pd.to_datetime(dob)).dt.days / 365.25`
+- Handle leap years correctly with 365.25 divisor
+- Validate calculated ages are in reasonable range (5-100)
+- Create age groups: <18, 18-25, 26-35, 36-45, 46-55, 55+
+
+### Motivational Engine Logic
+- Segment by difficulty level for fair comparisons
+- Consider age groups for demographic targeting
+- Provide specific score targets, not just percentile rankings
+- Format feedback messages to be encouraging and actionable
+- Include "next milestone" calculations
+- Personalize messages based on user performance history
+
+## STREAMLIT DASHBOARD CONVENTIONS
+- Create dashboard files in `src/` with prefix `dashboard_` (e.g., `dashboard_racer.py`)
+- Use st.cache_data for expensive computations
+- Structure dashboards: header, input controls, results, visualizations
+- Always include error handling for user inputs
+- Use st.columns() for professional layouts
+- Include loading indicators for long operations
+- Validate all user inputs before processing
+
+## FILE NAMING CONVENTIONS
+- Notebooks: `{game_name}_{purpose}.ipynb` (e.g., `racer_eda.ipynb`, `model_training.ipynb`)
+- Scripts: `{purpose}.py` (e.g., `data_locator.py`, `schema_discovery.py`)
+- Modules: `{functionality}.py` (e.g., `data_processing.py`, `modeling.py`)
+- Models: `{game}_{algorithm}_v{version}_{date}.pkl`
+- Plots: `{analysis_type}_{game}_{date}.png`
+- Data exports: `{game}_data_{date}.csv`
+
+## DOCUMENTATION REQUIREMENTS
+- Add comprehensive docstrings to ALL functions in `src/` modules
+- Include type hints for all function parameters and return values
+- Use Google-style docstrings with Args, Returns, Raises sections
+- Use markdown cells in notebooks to explain analysis steps
+- Comment complex SQL queries and data transformations
+- Include examples in docstrings for complex functions
+- Document model performance and limitations
+
+## TESTING APPROACH
+- Test database connections before complex queries
+- Validate data shapes and types after loading
+- Check for expected columns before analysis
+- Verify model outputs are reasonable (e.g., percentiles between 0-100)
+- Test model loading and prediction functions
+- Validate percentile calculations with known data
+- Test edge cases (empty data, single user, extreme scores)
+
+## SECURITY CONSIDERATIONS
+- Never hardcode database credentials in notebooks or scripts
+- Use environment variables or config files for sensitive data
+- Sanitize any user inputs in dashboard applications
+- Be mindful of PII when saving sample data or plots
+- Use secure connection strings for database access
+- Validate all external inputs before processing
+
+## GIT AND VERSION CONTROL
+- Commit frequently with descriptive messages
+- Use conventional commit format: "feat:", "fix:", "docs:", "refactor:"
+- Never commit large data files or trained models (use .gitignore)
+- Always pull before pushing when collaborating
+- Use meaningful branch names for features
+- Include model performance metrics in commit messages
+- Tag releases with version numbers
+
+## PERFORMANCE OPTIMIZATION
+- Sample large datasets for visualization (use .sample(n=2000, random_state=42))
+- Use .copy() when creating derived DataFrames to avoid warnings
+- Close database connections promptly
+- Avoid loading entire large tables when possible
+- Use vectorized operations instead of loops
+- Profile code performance for optimization opportunities
+- Use appropriate data types (int32 vs int64) for memory efficiency
+
+## PRODUCTION READINESS
+- Include comprehensive error handling in all functions
+- Log important events and errors appropriately
+- Use configuration files for environment-specific settings
+- Include input validation for all public functions
+- Design for scalability (handle growing datasets)
+- Include monitoring and alerting capabilities
+- Document deployment requirements and procedures
+
+## DEMO AND PRESENTATION PREPARATION
+- Create sample data snippets for demonstrations
+- Prepare example user scenarios with realistic data
+- Include visualization exports in high resolution for presentations
+- Document key findings and insights in markdown cells
+- Prepare executive summary of model performance
+- Include business impact metrics and projections
+
+Remember: This project aims to create a production-ready motivational engine that will be integrated into the main Sphery application. All code should be clean, documented, maintainable, and scalable for future expansion to other games and features. The system must handle real user data reliably and provide meaningful, actionable feedback to drive user engagement.

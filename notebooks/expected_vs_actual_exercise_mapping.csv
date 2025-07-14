@@ -1,0 +1,17 @@
+game_mode,difficulty_num,difficulty_name,expected_exercises,actual_exercises,match_score,match_percentage,workout_count,analysis_date
+DualFlow,-1,Expert,"touches, punches, jumps, squats, tripples, burpees","touches, punches, jumps, squats, tripples, lunges, burpees",0.8571428571428571,85.71,2425,2025-07-07 11:38:57
+DualFlow,0,Beginner,"touches, punches, jumps, squats","touches, punches, jumps, squats",1.0,100.0,384,2025-07-07 11:38:57
+DualFlow,1,Intermediate,"touches, punches, jumps, squats, tripples","touches, punches, jumps, squats, tripples, lunges",0.8333333333333334,83.33,338,2025-07-07 11:38:57
+DualFlow,2,Expert,"touches, punches, jumps, squats, tripples, burpees","touches, punches, jumps, squats, tripples, lunges, burpees",0.8571428571428571,85.71,2633,2025-07-07 11:38:57
+HomeFlow,2,Expert,,,0.0,0.0,10,2025-07-07 11:38:57
+LeagueQualification,-1,Expert,"touches, punches, jumps, squats, tripples, burpees","touches, punches, jumps, squats",0.6666666666666666,66.67,868,2025-07-07 11:38:57
+LeagueQualification,2,Expert,"touches, punches, jumps, squats, tripples, burpees","touches, punches, jumps, squats",0.6666666666666666,66.67,1333,2025-07-07 11:38:57
+LegDay,0,Beginner,"touches, punches, lunges, tripples","touches, tripples, lunges",0.75,75.0,17,2025-07-07 11:38:57
+LegDay,1,Intermediate,"touches, lunges, tripples, jumps, squats","touches, jumps, squats, tripples, lunges",1.0,100.0,41,2025-07-07 11:38:57
+LegDay,2,Expert,"touches, lunges, tripples, jumps, squats, burpees","touches, jumps, squats, tripples, lunges, burpees",1.0,100.0,20,2025-07-07 11:38:57
+RehaFlow,-1,Expert,,"touches, punches, jumps, squats, lunges",0.0,0.0,712,2025-07-07 11:38:57
+RehaFlow,2,Expert,,"touches, punches, jumps, squats, lunges",0.0,0.0,115,2025-07-07 11:38:57
+UpperBody,-1,Expert,"touches, punches, jumps, burpees","touches, punches, jumps, burpees",1.0,100.0,313,2025-07-07 11:38:57
+UpperBody,0,Beginner,"touches, punches","touches, punches",1.0,100.0,469,2025-07-07 11:38:57
+UpperBody,1,Intermediate,"touches, punches, jumps","touches, punches, jumps",1.0,100.0,534,2025-07-07 11:38:57
+UpperBody,2,Expert,"touches, punches, jumps, burpees","touches, punches, jumps, burpees",1.0,100.0,1234,2025-07-07 11:38:57
